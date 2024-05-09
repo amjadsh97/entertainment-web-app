@@ -70,6 +70,30 @@ const setDataFromLocalStorage = () => {
 useEffect(() => {
 	setDataFromLocalStorage();
 }, []); // Run once on component mount
+
+//code to handle the differenet sizes of images
+{data.map((item: Video, index: number) => (
+	//some elements...
+	<article className={`card ${isTrending ? "card-overlay" : "stacked-card"}`} key={index}>
+      <picture>
+	    {item.isTrending && item.thumbnail.trending && (
+		<>
+			<source srcSet={require(`../../assets/${item.thumbnail.trending.large}`)}
+			        media='(min-width: 1170px)'/>
+			<img src={require(`../../assets/${item.thumbnail.trending.small}`)} alt=''/>
+		</>
+	    )}
+	    {!item.isTrending && (
+		  <>
+			<source srcSet={require(`../../assets/${item.thumbnail.regular.large}`)} media='(min-width: 1170px)'/>
+			<source srcSet={require(`../../assets/${item.thumbnail.regular.medium}`)} media='(min-width: 768px)'/>
+			<img src={require(`../../assets/${item.thumbnail.regular.small}`)} alt=''/>
+		  </>
+	    )}
+      </picture>
+    //some elements...
+    </article>
+))}
 ```
 
 ### Continued development

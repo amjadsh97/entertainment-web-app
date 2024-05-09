@@ -6,10 +6,10 @@
   border: 8px solid;
   border-color: var(--white) #0000;
   animation: l1 1s infinite;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  /*position: fixed;*/
+  /*left: 50%;*/
+  /*top: 50%;*/
+  /*transform: translate(-50%, -50%);*/
 }
 
 @keyframes l1 {

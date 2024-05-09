@@ -16,6 +16,11 @@ html {
   display: flex;
 }
 
+.app-is-loading.app {
+  justify-content: center;
+  align-items: center;
+}
+
 header.header {
   background-color: var(--dark-blue);
   border-radius: 20px;

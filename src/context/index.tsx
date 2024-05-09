@@ -26,9 +26,16 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({children}) => {
 
   // Function to set data from local storage
   const setDataFromLocalStorage = () => {
-    const storedData: any = localStorage.getItem('data') || dataJSON;
+    const storedData = localStorage.getItem('data');
     if (storedData) {
-      setData(JSON.parse(storedData));
+      try {
+        setData(JSON.parse(storedData));
+      } catch (error) {
+        console.error('Error parsing stored data:', error);
+      }
+    } else {
+      // Local storage is empty, provide default data
+      setData(dataJSON); // Replace defaultData with your actual default data
     }
   };
 

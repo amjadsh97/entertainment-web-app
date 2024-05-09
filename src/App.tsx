@@ -65,6 +65,14 @@ function AppContent() {
 
   }, [user, navigate]);
 
+  useEffect(() =>{
+    if (isLoading) {
+      document.querySelector(".app")?.classList.add("app-is-loading")
+    } else {
+      document.querySelector(".app")?.classList.remove("app-is-loading")
+    }
+  }, [isLoading])
+
   if (isLoading) {
     return <Loader/>;
   }
