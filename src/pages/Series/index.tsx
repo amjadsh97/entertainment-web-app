@@ -32,7 +32,7 @@ const Movies = () => {
       <Search value={search} onChange={(value) => setSearch(value)}/>
       {!search ? (
         <section className="section recommended-section">
-          <h2 className='section-title'>Movies</h2>
+          <h2 className='section-title'>TV Series</h2>
           <GridList data={dataExported}/>
         </section>
       ) : (

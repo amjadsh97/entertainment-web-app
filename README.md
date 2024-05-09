@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/amjadsh97/entertainment-web-app)
+- Live Site URL: [Add live site URL here](https://entertainment-web-app-liart-phi.vercel.app/)
 
 ## My process
 
@@ -48,6 +48,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
+- Typescript
 - [React](https://reactjs.org/) - JS library
 - [React Router Dom](https://reactrouter.com/en/main) - JS library
 - [Firebase](https://firebase.google.com/) - backend auth
