@@ -1,5 +1,5 @@
 import React from 'react';
-import {iconBookmarkEmpty, iconBookmarkFull} from "../../assets";
+import {iconBookmarkEmpty, iconBookmarkFull, iconPlay} from "../../assets";
 import {useAppContext} from "../../context";
 
 interface Thumbnail {
@@ -60,6 +60,10 @@ const GridList: React.FC<GridListProps> = ({data, isTrending}) => {
                 </>
               )}
             </picture>
+            <button className="play-action">
+              <img src={iconPlay} alt='Play'/>
+              <span className={'button-text'}>Play</span>
+            </button>
           </div>
           <div className='card-details'>
             <div className='card-row'>
@@ -73,6 +77,7 @@ const GridList: React.FC<GridListProps> = ({data, isTrending}) => {
             {item.isBookmarked ? <img src={iconBookmarkFull} alt='Bookmarked'/> :
               <img src={iconBookmarkEmpty} alt='Not Bookmarked'/>}
           </div>
+
         </article>
       ))}
     </div>

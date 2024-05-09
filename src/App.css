@@ -166,6 +166,44 @@ section.trending-section {
   object-fit: cover;
 }
 
+button.play-action {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 19px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgb(151 151 151 / 50%);
+  border: unset;
+  padding: 9px;
+  min-width: 117px;
+  border-radius: 30px;
+  opacity: 0;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+button.play-action img {
+  width: 30px;
+  height: 30px;
+  position: unset;
+}
+
+span.button-text {
+  color: var(--white);
+}
+
+@media (hover: hover) {
+  .cards-wrapper .card:hover button.play-action{opacity: 1;}
+
+  .cards-wrapper .card:hover .image-wrapper img{opacity: 0.5;}
+
+  .card {cursor: pointer}
+}
+
+
 .card.card-overlay {
   max-width: 37%;
   min-width: 470px;
